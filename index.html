@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSEPal Clone - Realtime Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="brand">
+        <span class="brand-logo">C</span>
+        <div class="brand-text">
+          <span class="brand-title">CSEPal Clone</span>
+          <span class="brand-subtitle">Realtime Market Insights</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#market">Market</a>
+        <a href="#watchlist">Watchlist</a>
+        <a href="#news">News</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn ghost">Log in</button>
+        <button class="btn primary">Get Started</button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero" id="overview">
+        <div class="hero-text">
+          <h1>Reliable, Realtime CSE-style Analytics</h1>
+          <p>
+            Modern market dashboard with streaming-style price updates and
+            analytics. This is a clone-style demo you can connect to any stock
+            API.
+          </p>
+          <div class="hero-actions">
+            <button class="btn primary">View Live Dashboard</button>
+            <button class="btn ghost">Connect Your Data</button>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-label">Active Symbols</span>
+              <span class="metric-value" id="metric-symbols">0</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Total Market Change</span>
+              <span class="metric-value positive" id="metric-change">+0.00%</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Updates / Minute</span>
+              <span class="metric-value" id="metric-updates">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-header">
+            <span>Realtime Ticker</span>
+            <span class="live-dot">LIVE</span>
+          </div>
+          <div class="ticker-list" id="ticker-list">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" id="market">
+        <section class="card wide">
+          <header class="card-header">
+            <div>
+              <h2>Market Heatmap</h2>
+              <p class="muted">Synthetic data for demo purposes</p>
+            </div>
+          </header>
+          <div class="heatmap" id="heatmap">
+            <!-- Filled by JS -->
+          </div>
+        </section>
+
+        <section class="card" id="watchlist">
+          <header class="card-header">
+            <div>
+              <h2>Watchlist</h2>
+              <p class="muted">Pinned symbols with realtime moves</p>
+            </div>
+          </header>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Last</th>
+                  <th>Change</th>
+                  <th>%</th>
+                  <th>Volume</th>
+                </tr>
+              </thead>
+              <tbody id="watchlist-body">
+                <!-- Filled by JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card" id="news">
+          <header class="card-header">
+            <div>
+              <h2>News & Signals</h2>
+              <p class="muted">Rotating headlines to mimic live feed</p>
+            </div>
+          </header>
+          <ul class="news-list" id="news-list">
+            <!-- Filled by JS -->
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Demo clone of CSEPal-style dashboard (no real data).</span>
+      <span>Hook into your own REST / WebSocket API for production.</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>
+
